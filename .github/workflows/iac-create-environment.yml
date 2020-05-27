@@ -26,6 +26,6 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az group create -l westus -n rg-mlOpsPython-test
+          az group create -l westus -n rg-mlopsazure-demo
           az deployment group create --resource-group rg-mlopsazure-demo --template-file .cloud/.azure/cloud-environment.json --parameters "{\"baseName\": {\"value\": \"github\"},\"workspace\": {\"value\": \"myamlworkspace\"}}"
     
